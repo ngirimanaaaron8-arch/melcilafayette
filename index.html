@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Os favoritos de maquilhagem e cabelo de Melci Lafayette.">
+<meta property="og:title" content="Os Favoritos Dela">
+<meta property="og:image" content="img/perfil.jpg">
+<link rel="icon" href="img/perfil.jpg">
+<style>*,*::before,*::after{box-sizing:border-box}body{margin:0}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+<title>Os Favoritos Dela</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,500&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one narrow phone-first column, like a link-in-bio, with a two-up product grid */
+:root {
+  --bg: #f7eff3;
+  --surface: #fffafc;
+  --ink: #2b1424;
+  --muted: #7a5f70;
+  --line: #e7d5df;
+  --accent: #b8336a;
+  --accent-ink: #ffffff;
+  --ph-a: #edd3df;
+  --ph-b: #e3c1d3;
+  --display: "Bodoni Moda", "Didot", Georgia, serif;
+  --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1c0f18; --surface: #271622; --ink: #f6e6ee; --muted: #b898aa;
+    --line: #3d2534; --accent: #e7679b; --accent-ink: #1c0f18;
+    --ph-a: #3a2232; --ph-b: #4a2b3f; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1c0f18; --surface: #271622; --ink: #f6e6ee; --muted: #b898aa;
+  --line: #3d2534; --accent: #e7679b; --accent-ink: #1c0f18;
+  --ph-a: #3a2232; --ph-b: #4a2b3f; color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap {
+  max-width: 560px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 32px 48px;
+  display: flex; flex-direction: column; gap: 28px;
+}
+header { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+.avatar {
+  width: 112px; height: 112px; border-radius: 50%;
+  background: linear-gradient(140deg, var(--ph-a), var(--ph-b));
+  border: 3px solid var(--surface); box-shadow: 0 0 0 2px var(--accent);
+  display: grid; place-items: center; color: var(--muted); font-size: 12px; overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+h1 { font-family: var(--display); font-weight: 700; font-size: 2.1rem; line-height: 1.1; margin: 4px 0 0; text-wrap: balance; }
+h1 em { font-style: italic; font-weight: 500; color: var(--accent); }
+.handle { color: var(--muted); font-size: 14px; margin: 0; }
+.intro { margin: 2px 0 0; max-width: 40ch; }
+
+.tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; }
+.tabs button {
+  font: 600 14px var(--body); color: var(--ink); background: transparent;
+  border: 1px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer;
+}
+.tabs button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.tabs button:focus-visible, .buy:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+section h2 {
+  font-family: var(--display); font-weight: 500; font-style: italic; font-size: 1.4rem;
+  margin: 0 0 12px; display: flex; align-items: baseline; gap: 10px;
+}
+section h2 small { font: 600 11px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); font-style: normal; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 14px; overflow: hidden; display: flex; flex-direction: column; }
+.photo {
+  aspect-ratio: 4 / 5; max-width: 100%;
+  background: linear-gradient(160deg, var(--ph-a), var(--ph-b));
+  display: grid; place-items: center; color: var(--muted); font-size: 12px; text-align: center; padding: 8px;
+}
+.photo:has(img) { background: #ffffff; padding: 6px; }
+.photo img { width: 100%; height: 100%; object-fit: contain; }
+.body { padding: 12px; display: flex; flex-direction: column; gap: 4px; flex: 1; min-width: 0; }
+.brand { font: 600 11px var(--body); letter-spacing: .12em; text-transform: uppercase; color: var(--accent); }
+.name { font-weight: 600; line-height: 1.3; }
+.why { color: var(--muted); font-size: 13px; line-height: 1.4; flex: 1; }
+.buy {
+  margin-top: 8px; display: block; text-align: center; text-decoration: none;
+  background: var(--accent); color: var(--accent-ink); font-weight: 600; font-size: 14px;
+  padding: 10px 8px; border-radius: 10px;
+}
+.buy.off { background: transparent; color: var(--muted); border: 1px dashed var(--line); pointer-events: none; }
+
+.soon {
+  border: 1px solid var(--line); border-radius: 14px; padding: 18px; text-align: center;
+  background: var(--surface); display: flex; flex-direction: column; gap: 6px;
+}
+.soon h3 { font-family: var(--display); font-weight: 700; font-size: 1.25rem; margin: 0; }
+.soon p { margin: 0; color: var(--muted); }
+footer { text-align: center; color: var(--muted); font-size: 12px; line-height: 1.5; max-width: 46ch; margin: 0 auto; }
+@media (max-width: 340px) { .grid { grid-template-columns: 1fr; } }
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="avatar" id="avatar">foto dela</div>
+    <h1>Os meus <em>favoritos</em></h1>
+    <p class="handle" id="handle">@melcilafayette0</p>
+    <p class="intro">A maquilhagem e os produtos de cabelo que uso todos os dias. Tudo o que vês nos meus vídeos está aqui.</p>
+  </header>
+
+  <nav class="tabs" aria-label="Filtrar produtos">
+    <button type="button" id="tab-all" data-filter="all" aria-pressed="true">Tudo</button>
+    <button type="button" id="tab-make" data-filter="make" aria-pressed="false">Maquilhagem</button>
+    <button type="button" id="tab-hair" data-filter="hair" aria-pressed="false">Cabelo</button>
+    <button type="button" id="tab-acc" data-filter="acc" aria-pressed="false">Acessórios</button>
+  </nav>
+
+  <section data-group="make">
+    <h2>Maquilhagem <small>SHEGLAM</small></h2>
+    <div class="grid" id="grid-make"></div>
+  </section>
+
+  <section data-group="hair">
+    <h2>Cabelo <small>Lola from Rio</small></h2>
+    <div class="grid" id="grid-hair"></div>
+  </section>
+
+  <section data-group="acc">
+    <h2>Acessórios <small>Para o dia a dia</small></h2>
+    <div class="grid" id="grid-acc"></div>
+  </section>
+
+  <footer>
+    Alguns links nesta página são links de afiliado. Se comprares através deles, posso receber uma pequena comissão, sem custo extra para ti.
+  </footer>
+</div>
+
+<script>
+/* ===== EDITAR AQUI =====
+   Para cada produto: cola o link de afiliado em "link" e o endereço da foto em "foto".
+   Enquanto "link" estiver vazio, o botão mostra "Link em breve". */
+const PERFIL = { handle: "@melcilafayette0", foto: "img/perfil.jpg" };
+
+const PRODUTOS = [
+  { grupo: "make", marca: "SHEGLAM", nome: "Base Complexion Pro (matte, longa duração)", porque: "Pele uniforme e mate o dia todo.", link: "", foto: "img/base.jpg" },
+  { grupo: "make", marca: "SHEGLAM", nome: "Blush em creme Coração",    porque: "Cor natural nas bochechas, fácil de esbater.", link: "", foto: "img/blush-coracao.jpg" },
+  { grupo: "make", marca: "SHEGLAM", nome: "Color Bloom Blush Líquido", porque: "Um toque de rosa que dura o dia todo.",       link: "", foto: "img/blush-liquido.jpg" },
+  { grupo: "make", marca: "SHEGLAM", nome: "Calendário do Advento Sugar, Spice & Everything Glam", porque: "Uma caixa cheia de maquilhagem, ótima para oferecer.", link: "", foto: "img/calendario.jpg" },
+  { grupo: "hair", marca: "Lola from Rio", nome: "Rapunzel Shampoo Rejuvenescedor (250 ml)", porque: "O primeiro passo da minha rotina capilar.", link: "", foto: "img/shampoo.jpg" },
+  { grupo: "hair", marca: "Lola from Rio", nome: "Rapunzel Milk Hair Spray (leave-in, 250 ml)", porque: "O leave-in que uso todos os dias.", link: "", foto: "img/rapunzel.jpg" },
+  { grupo: "acc",  marca: "Acessório", nome: "Mola de cabelo (clip claw)", porque: "Para prender o cabelo em segundos.", link: "", foto: "img/mola.jpg" },
+  { grupo: "acc",  marca: "Acessório", nome: "Escova de cabelo",           porque: "Desembaraça sem partir o cabelo.",   link: "", foto: "img/escova.jpg" }
+];
+/* ===== FIM ===== */
+
+function esc(s) { return String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c])); }
+
+function card(p) {
+  const photo = p.foto ? `<img src="${esc(p.foto)}" alt="${esc(p.nome)}">` : "foto do produto";
+  const btn = p.link
+    ? `<a class="buy" href="${esc(p.link)}" target="_blank" rel="noopener sponsored">Comprar</a>`
+    : `<span class="buy off">Link em breve</span>`;
+  return `<article class="card"><div class="photo">${photo}</div><div class="body">
+    <span class="brand">${esc(p.marca)}</span><span class="name">${esc(p.nome)}</span>
+    <span class="why">${esc(p.porque)}</span>${btn}</div></article>`;
+}
+
+document.getElementById("handle").textContent = PERFIL.handle;
+if (PERFIL.foto) document.getElementById("avatar").innerHTML = `<img src="${esc(PERFIL.foto)}" alt="">`;
+document.getElementById("grid-make").innerHTML = PRODUTOS.filter(p => p.grupo === "make").map(card).join("");
+document.getElementById("grid-hair").innerHTML = PRODUTOS.filter(p => p.grupo === "hair").map(card).join("");
+document.getElementById("grid-acc").innerHTML = PRODUTOS.filter(p => p.grupo === "acc").map(card).join("");
+
+document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
+  const f = b.dataset.filter;
+  document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  document.querySelectorAll("section[data-group]").forEach(s => { s.hidden = f !== "all" && s.dataset.group !== f; });
+}));
+</script>
+
+</body>
+</html>
